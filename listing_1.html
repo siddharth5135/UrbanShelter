@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>the rooms</title>
+	<link rel="stylesheet" type="text/css" href="listing.css">
+	<style type="text/css">
+     
+     input[type=text] 
+     {
+        width: 70%;
+        padding-top: 1rem;
+        padding-bottom: 10px;
+        padding-left: 1rem;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        border-bottom: 2px solid #4C7972;
+        color: #915A3C;
+        font-size: 1rem;
+     }
+
+     input[type=number] 
+     {
+        width: 70%;
+        padding-top: 1rem;
+        padding-bottom: 10px;
+        padding-left: 1rem;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        border-bottom: 2px solid #4C7972;
+        color: #915A3C;
+        font-size: 1rem;
+     }   
+    
+    </style>
+
+</head>
+
+<body bgcolor="#EDEDED">
+
+
+	<?php
+		INSERT INTO `listing_address_table` (`House_no`, `Soc_name`, `Near`, `Street_name`, `Area`, `City`, `Total_houses`, `Floor_no`, `Total_floors`) VALUES ('B/5002', 'Siddhi Bungalows', 'Nr. Khodiyar Mata Temple', 'GST Road', 'New Ranip', 'Ahmedabad', 'Less than 50', '5th', '10');
+	?>
+
+
+
+	<div class="container">
+	<form class="back" method="POST">
+	   
+       <br>
+        <h2>&nbsp&nbspAddress Details</h2>
+        <br><br>
+       <div class="content_center">
+
+       			<!-- House Number -->
+				<input type="text" placeholder="House Number" name="house_no">
+		        <br><br>
+
+				<!-- Society Name -->
+                <input type="text" placeholder="Society Name" name="soc_name">
+		        <br><br>		        
+
+		        <!-- Near Place -->
+				<input type="text" placeholder="Near" name="near">
+		        <br><br>          
+
+		        <!-- Street Name -->
+				<input type="text" placeholder="Street Name" name="street">
+		        <br><br><br>	
+
+		        <!-- Area -->
+                <div class="pro_type">
+                <label>Area: &nbsp&nbsp</label>
+                <select class="property_type" name="s_area">
+                    <option name="area" value="Select">---------------Select---------------</option>
+                    <option name="area" value="New Ranip">New Ranip</option>
+                    <option name="area" value="Sola">Sola</option>
+                    <option name="area" value="Ghatlodiya">Ghatlodiya</option>
+                    <option name="area" value="Chandlodiya">Chandlodiya</option>
+                    <option name="area" value="Sindhu Bhawan">Sindhu Bhawan</option>
+                    <option name="area" value="Gota">Gota</option>
+                </select>
+                </div>
+                <br><br> 
+
+                <!-- City -->
+                <div class="pro_type">
+                <label>City: &nbsp&nbsp</label>
+                <select class="property_type" name="s_city">
+                    <option name="city" value="Ahmedabad">Ahmedabad</option>
+                </select>
+                </div>
+                <br><br>
+
+		        <!-- No. of Houses in Society -->
+		        <div class="pro_type">
+                <label>No. of Houses in Society: &nbsp&nbsp</label><br><br>
+                <select class="property_type" name="total_houses">
+                	<option name="house" value="Select">---------------Select---------------</option>
+                    <option name="house" value="Less than 50">Less than 50</option>
+                    <option name="house" value="Between 50 to 100">Between 50 to 100</option>
+                    <option name="house" value="More than 100">More than 100</option>
+                </select>
+                </div>
+                <br><br>
+
+                <!-- Floor Number -->
+                <div class="pro_type">
+                <label>Floor Number : &nbsp&nbsp</label><br><br>
+                <select class="property_type" name="floor_no">
+                	<option name="floor" value="Select">---------------Select---------------</option>
+                    <option name="floor" value="1st">1st</option>
+                    <option name="floor" value="2nd">2nd</option>
+                    <option name="floor" value="3rd">3rd</option>
+                    <option name="floor" value="4th">4th</option>
+                    <option name="floor" value="5th">5th</option>
+                    <option name="floor" value="6th">6th</option>
+                    <option name="floor" value="7th">7th</option>
+                    <option name="floor" value="8th">8th</option>
+                    <option name="floor" value="9th">9th</option>
+                    <option name="floor" value="10th">10th</option>
+                    <option name="floor" value="11th">11th</option>
+                    <option name="floor" value="12th">12th</option>
+                    <option name="floor" value="13th">13th</option>
+                    <option name="floor" value="14th">14th</option>
+                    <option name="floor" value="15th">15th</option>
+
+                </select>
+                </div>
+                <br><br>
+
+                <!-- Total Floors -->
+                <div class="pro_type">
+                <label>Total Floors : &nbsp&nbsp</label><br><br>
+                <select class="property_type" name="t_floors">
+                	<option name="floor" value="Select">---------------Select---------------</option>
+                    <option name="floor" value="1">1</option>
+                    <option name="floor" value="2">2</option>
+                    <option name="floor" value="3">3</option>
+                    <option name="floor" value="4">4</option>
+                    <option name="floor" value="5">5</option>
+                    <option name="floor" value="6">6</option>
+                    <option name="floor" value="7">7</option>
+                    <option name="floor" value="8">8</option>
+                    <option name="floor" value="9">9</option>
+                    <option name="floor" value="10">10</option>
+                    <option name="floor" value="11">11</option>
+                    <option name="floor" value="12">12</option>
+                    <option name="floor" value="13">13</option>
+                    <option name="floor" value="14">14</option>
+                    <option name="floor" value="15">15</option>
+
+                </select>
+                </div>
+                <br><br>         
+
+                
+                <br><br><br>
+
+                <!-- Button -->
+                <div class="applybtn">
+                <input type="submit" value="BACK" name="back">
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp          
+                <input type="submit" value="NEXT" name="next">
+                </div>
+                <br><br><br>
+
+            </div>
+	
+    </form>
+	</div>
+
+<!-- Footer -->
+    <br><br><br>
+
+    <footer class="footer-distributed">
+
+            <div class="footer-left">
+
+                <h3>the<span>rooms</span></h3>
+
+                <p class="footer-links">
+                    <a href="#" class="link-1">Home</a>
+                    
+                    <a href="#">Blog</a>
+                
+                    <a href="#">Pricing</a>
+                
+                    <a href="#">About</a>
+                    
+                    <a href="#">Faq</a>
+                    
+                    <a href="#">Contact</a>
+                </p>
+
+                <p class="footer-company-name">therooms Copyright Reserved © 2022</p>
+            </div>
+
+            <div class="footer-center">
+
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p><a href="https://www.google.co.in/maps/dir//3GMJ%2BG68+Ranchhodlal+Chhotalal+Technical+Institute,+Opp+Civil,+Near+Gujarat+High+Court,+S.G.Highway,+Sola,+Ahmedabad,+Gujarat+380060/@23.0801917,72.5265533,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x395e82db57cc8443:0x13a68fd1f0605c91!2m2!1d72.5305735!2d23.0837988"><span>R.C.Technical</span> Sola Bhagwat, Ahmedabad</a></p>
+                </div>
+
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <p>+917859223970</p>
+                </div>
+
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <p><a href="https://mail.google.com/mail/u/0/?hl=en#sent?compose=GTvVlcSBmltZCHjSqTZBLVqrsbBLMHvlLfTmGFglgSbQcMpHBNjhBCptwcLxlJCGKzdLhxbsjvVjs">therooms@gmail.com</a></p>
+                </div>
+
+            </div>
+
+            <div class="footer-right">
+
+                <p class="footer-company-about">
+                    <span>About the company</span>
+                    Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+                </p>
+
+                <div class="footer-icons">
+
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+</body>
+</html>

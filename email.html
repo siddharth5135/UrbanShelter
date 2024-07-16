@@ -1,0 +1,43 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <script type="text/javascript">
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var form = e.target;
+  var name = form.elements['name'].value;
+  var email = form.elements['email'].value;
+  var message = form.elements['message'].value;
+  var subject = 'New message from ' + name;
+  
+  var body = 'Name: ' + name + '\n\n';
+  body += 'Email: ' + email + '\n\n';
+  body += 'Message: ' + message + '\n\n';
+  
+  GmailApp.sendEmail('manthanbelani77@gmail.com', subject, body);
+  
+  alert('Your message has been sent!');
+  form.reset();
+});    
+  </script>
+</head>
+<body>
+  <form id="contact-form">
+  <label for="name">Name:</label>
+  <input type="text" name="name" required>
+  
+  <label for="email">Email:</label>
+  <input type="email" name="email" required>
+  
+  <label for="message">Message:</label>
+  <textarea name="message" required></textarea>
+  
+  <button type="submit">Send</button>
+</form>
+</body>
+</html>

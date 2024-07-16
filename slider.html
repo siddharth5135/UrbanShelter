@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            justify-self: center;
+            align-items: center;
+            background: #23e3c2;
+        }
+        .section{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .slider{
+            width: 800px;
+            height: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .slide{
+            width: 500%;
+            height: 500px;
+            display: flex;
+        }
+        .slide input{
+            display: none;
+        }
+        .st{
+            width: 20%;
+            transition: 1s;
+        }
+        .st img{
+            width: 800px;
+            height: 500px;
+        }
+        .nav-m{
+            position: absolute;
+            width: 800px;
+            margin-top: 40px;
+            justify-content: center;
+            display: flex;    
+        }
+        .m-btn{
+            border: 2px solid black;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 1s;
+        }
+        .m-btn:not(:last-child){
+            margin-right: 30px; ;
+        }
+        .m-btn:hover{
+            background-color:#23e3c2;
+        }
+        #radio1:checked ~.first{
+                margin-left: 0;
+        }
+        #radio2:checked ~.first{
+                margin-left: -20%;
+        }
+        #radio3:checked ~.first{
+                margin-left: -40%;
+        }
+        #radio4:checked ~.first{
+                margin-left: -60%;
+        }
+        .nav-auto{
+            position: absolute;
+            width: 800px;
+            margin-top: 400px;
+            display: flex;
+            justify-content: center;
+        }
+        .nav-auto div{
+            border: 2px solid #23e3c2;
+            padding: 5px;
+            border-radius: 10px;
+            transition: 1s;
+        }
+        .nav-auto div:not(:last-child){
+            margin-right: 30px;
+            justify-content: center;
+        }
+        #radio1:checked ~ .nav-auto .a-b1{
+            background-color: #23e3c2;
+        }
+        #radio3:checked ~ .nav-auto .a-b2{
+            background-color: #23e3c2;
+        }
+        #radio3:checked ~ .nav-auto .a-b3{
+            background-color: #23e3c2;
+        }
+        #radio4:checked ~ .nav-auto .a-b4{
+            background-color: #23e3c2;
+        }
+    </style>
+</head>
+<body>
+    <section class="section">
+        <div class="slider">
+            <div class="slide">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+
+                <div class="st first">
+                    <img src="https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=600" alt="img1">
+                </div>
+
+                <div class="st">
+                    <img src="https://images.pexels.com/photos/315938/pexels-photo-315938.jpeg?auto=compress&cs=tinysrgb&w=600" alt="img1">
+                </div>
+
+                <div class="st">
+                    <img src="https://images.pexels.com/photos/1168940/pexels-photo-1168940.jpeg?auto=compress&cs=tinysrgb&w=600" alt="img1">
+                </div>
+
+                <div class="st">
+                    <img src="https://images.pexels.com/photos/498697/pexels-photo-498697.jpeg?auto=compress&cs=tinysrgb&w=600" alt="img1">
+                </div>
+
+                <div class="nav-auto">
+                    <div class="a-b1"></div>
+                    <div class="a-b2"></div>
+                    <div class="a-b3"></div>
+                    <div class="a-b4"></div>
+                </div>
+
+                <div class="nav-m">
+                    <!-- <label for="radio1" class="m-btn"></label>
+                    <label for="radio1" class="m-btn"></label>
+                    <label for="radio1" class="m-btn"></label>
+                    <label for="radio1" class="m-btn"></label> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript" >
+        var counter=1;
+        setInterval(function(){
+            document.getElementById('radio' + counter).checked=true ;
+            counter++;
+            if(counter > 4){
+                counter = 1;
+            }
+        },3000 );
+    </script>
+</body>
+</html>
